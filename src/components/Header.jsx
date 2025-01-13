@@ -21,13 +21,17 @@ export default function Header() {
 				<div className="collapse navbar-collapse" id="navbarNav">
 					<ul className="navbar-nav">
 						<li className="nav-item">
-							<NavLink className="nav-link active" aria-current="page" to="/">
-								Home
+							<NavLink
+								className="nav-link active"
+								aria-current="page"
+								to="/movies"
+							>
+								Movie List
 							</NavLink>
 						</li>
 						<li className="nav-item">
-							<NavLink className="nav-link" to="/movies">
-								Movie details
+							<NavLink className="nav-link" to="/about">
+								About
 							</NavLink>
 						</li>
 					</ul>

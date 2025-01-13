@@ -1,8 +1,8 @@
-export default function HomePage() {
+export default function MovieIndexPage() {
 	return (
 		<>
 			<div className="container my-5">
-				<h1>HomePage</h1>
+				<h1>Movie List</h1>
 			</div>
 		</>
 	);

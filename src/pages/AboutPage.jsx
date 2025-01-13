@@ -1,8 +1,8 @@
-export default function ShowPage() {
+export default function AboutPage() {
 	return (
 		<>
 			<div className="container my-5">
-				<h1>Movie details</h1>
+				<h1>About</h1>
 			</div>
 		</>
 	);
