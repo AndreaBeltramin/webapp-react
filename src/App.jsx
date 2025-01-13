@@ -1,13 +1,18 @@
 // import { useState } from 'react'
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import DefaultLayout from "./layouts/DefaultLayout";
+import HomePage from "./pages/HomePage";
+import Showpage from "./pages/ShowPage";
 
-function App() {
+export default function App() {
 	return (
-		<>
-			<div className="container my-5">
-				<h1>La mia webapp</h1>
-			</div>
-		</>
+		<BrowserRouter>
+			<Routes>
+				<Route element={<DefaultLayout />} path="/">
+					<Route index element={<HomePage />}></Route>
+					<Route path="movies" element={<Showpage />}></Route>
+				</Route>
+			</Routes>
+		</BrowserRouter>
 	);
 }
-
-export default App;
