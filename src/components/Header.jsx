@@ -4,7 +4,7 @@ export default function Header() {
 	return (
 		<nav className="navbar navbar-expand-lg">
 			<div className="container-fluid">
-				<NavLink className="navbar-brand" to="/">
+				<NavLink className="navbar-brand flex-grow-1 fw-bold" to="/">
 					My Movie Webapp React
 				</NavLink>
 				<button
@@ -18,11 +18,11 @@ export default function Header() {
 				>
 					<span className="navbar-toggler-icon"></span>
 				</button>
-				<div className="collapse navbar-collapse" id="navbarNav">
+				<div className="collapse navbar-collapse flex-grow-0" id="navbarNav">
 					<ul className="navbar-nav">
 						<li className="nav-item">
 							<NavLink
-								className="nav-link active"
+								className="nav-link active fw-bold"
 								aria-current="page"
 								to="/movies"
 							>
@@ -30,7 +30,7 @@ export default function Header() {
 							</NavLink>
 						</li>
 						<li className="nav-item">
-							<NavLink className="nav-link" to="/about">
+							<NavLink className="nav-link fw-bold" to="/about">
 								About
 							</NavLink>
 						</li>

@@ -25,6 +25,10 @@ a {
 	text-decoration: none;
 }
 
+img {
+	object-fit: cover;
+	max-height: 350px;
+}
 .card {
 	background-color: transparent;
 	border: none;
