@@ -2,10 +2,10 @@ import { Link, NavLink } from "react-router-dom";
 
 export default function Header() {
 	return (
-		<nav className="navbar navbar-expand-lg bg-body-tertiary">
+		<nav className="navbar navbar-expand-lg">
 			<div className="container-fluid">
 				<NavLink className="navbar-brand" to="/">
-					My Webapp React
+					My Movie Webapp React
 				</NavLink>
 				<button
 					className="navbar-toggler"
