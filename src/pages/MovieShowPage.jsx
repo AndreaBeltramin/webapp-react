@@ -21,21 +21,24 @@ export default function MovieShowPage() {
 			<div className="container my-5">
 				{movie && (
 					<>
-						<div className="row d-flex justify-content-center">
-							<div className="col-5  mb-5">
-								<div className="card h-100">
+						<div className="card mb-3">
+							<div className="row g-0">
+								<div className="col-md-4">
 									<img
 										src={movie.image}
 										alt={movie.name}
-										className="card-img-top img-fluid"
+										className="img-fluid"
 									/>
-									<div className="card-body">
-										<h3 className="card-title">{movie.title}</h3>
+								</div>
+								<div className="col-md-8 overflow-auto">
+									<div className="card-body h-100">
+										<h1 className="card-title fw-bold">{movie.title}</h1>
 										<h5 className="card-subtitle">
 											{movie.director} - {movie.release_year} - {movie.genre}
 										</h5>
 										<p className="card-text">{movie.abstract}</p>
-										<div className="row row-cols-3">
+
+										<div className="row row-cols-6 g-3">
 											{movie.reviews.map((review, index) => (
 												<div className="col" key={index}>
 													<div className="card h-100">
@@ -45,9 +48,9 @@ export default function MovieShowPage() {
 															alt={movie.title}
 														/>
 														<div className="card-body">
-															<p>{review.name}</p>
-															<p>{review.text}</p>
-															<p>{review.vote}</p>
+															<p className="my-1">{review.name}</p>
+															<p className="my-1">{review.vote}</p>
+															<p className="my-1">{review.text}</p>
 														</div>
 													</div>
 												</div>
@@ -56,53 +59,54 @@ export default function MovieShowPage() {
 									</div>
 								</div>
 							</div>
-
-							<form className="row mb-5 align-items-end">
-								<div className="col-3">
-									<label for="exampleFormControlInput1" className="form-label">
-										Nome
-									</label>
-									<input
-										type="text"
-										className="form-control"
-										id="exampleFormControlInput1"
-										placeholder="Inserisci il tuo nome"
-									></input>
-								</div>
-								<div className="col-3">
-									{" "}
-									<label
-										for="exampleFormControlTextarea1"
-										className="form-label"
-									>
-										Voto
-									</label>
-									<input
-										type="number"
-										className="form-control"
-										id="exampleFormControlTextarea1"
-										placeholder="Inserisci un voto da 1 a 5"
-										min="1"
-										max="5"
-									></input>
-								</div>
-								<div className="col-3">
-									<label
-										for="exampleFormControlTextarea1"
-										className="form-label"
-									>
-										Inserisci la tua recensione
-									</label>
-									<input
-										className="form-control"
-										id="exampleFormControlTextarea1"
-									></input>
-								</div>
-								<div className="col-2 d-flex justify-content-center">
-									<button className="btn btn-secondary ">Invia</button>
-								</div>
-							</form>
 						</div>
+
+						<form className="row mb-5 align-items-end">
+							<div>
+								<h2>
+									Dicci cosa ne pensi del film, inserisci qui la tua recensione!
+								</h2>
+							</div>
+							<div className="col-3">
+								<label for="exampleFormControlInput1" className="form-label">
+									Nome
+								</label>
+								<input
+									type="text"
+									className="form-control"
+									id="exampleFormControlInput1"
+									placeholder="Inserisci il tuo nome"
+									autoFocus
+								></input>
+							</div>
+							<div className="col-3">
+								{" "}
+								<label for="exampleFormControlTextarea1" className="form-label">
+									Voto
+								</label>
+								<input
+									type="number"
+									className="form-control"
+									id="exampleFormControlTextarea1"
+									placeholder="Inserisci un voto da 1 a 5"
+									min="1"
+									max="5"
+								></input>
+							</div>
+							<div className="col-3">
+								<label for="exampleFormControlTextarea1" className="form-label">
+									Inserisci la tua recensione
+								</label>
+								<input
+									className="form-control"
+									id="exampleFormControlTextarea1"
+									placeholder="..."
+								></input>
+							</div>
+							<div className="col-2 d-flex justify-content-center">
+								<button className="btn btn-secondary ">Invia</button>
+							</div>
+						</form>
 					</>
 				)}
 			</div>

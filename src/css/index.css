@@ -16,11 +16,26 @@ body {
 	background-color: var(--bg-secondary-color);
 }
 
-#carouselMoviesList {
+/* #carouselMoviesList {
 	margin: auto;
 	background-color: rgb(52, 39, 39);
-}
+} */
 
 a {
 	text-decoration: none;
+}
+
+.card {
+	background-color: transparent;
+	border: none;
+}
+
+.card-body {
+	padding: 10px;
+	line-height: 20px;
+}
+
+.card-body p:last-child {
+	font-size: 0.8rem;
+	line-height: 15px;
 }

@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import Card from "../components/Card";
 
 export default function MovieIndexPage() {
 	const [movies, setMovies] = useState([]);
@@ -24,17 +25,7 @@ export default function MovieIndexPage() {
 					{movies.map((movie, index) => (
 						<div className="col" key={index}>
 							<Link to={"/movies/" + movie.id}>
-								<div className="card h-100">
-									<img
-										src={movie.image}
-										alt={movie.name}
-										className="card-img-top h-100"
-									/>
-									<div className="card-body">
-										<h3 className="card-title">{movie.title}</h3>
-										<p className="card-text">{movie.abstract}</p>
-									</div>
-								</div>
+								<Card data={movie} />
 							</Link>
 						</div>
 					))}
